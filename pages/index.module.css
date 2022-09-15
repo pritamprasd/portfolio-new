@@ -1,0 +1,19 @@
+.global_window {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 8fr;    
+}
+
+.main_nav {
+    background-color: yellow;
+}
+
+.main_view {
+    background: rgb(48, 123, 145);
+}
+
+@media screen and (max-width: 600px) {
+    .global_window  {
+        grid-template-columns: 1fr;
+    }
+}
