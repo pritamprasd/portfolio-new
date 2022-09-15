@@ -1,6 +1,6 @@
 import {yamlToJson} from '../utils/transformers'
 import {configUrl} from '../utils/config'
-import Sidebar from '../containers/sidebar/Sidebar.jsx';
+import Navbar from '../containers/navbar/Navbar.jsx';
 import MainCanvas from '../containers/main_canvas/MainCanvas';
 
 export async function getStaticProps() {
@@ -18,7 +18,7 @@ function Index({config}) {
   return(
     <div>
       <div>Welcome to Next.js! {config.title}</div>
-      <Sidebar/>
+      <Navbar/>
       <MainCanvas/>
     </div>
   )
