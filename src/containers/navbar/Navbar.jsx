@@ -1,6 +1,6 @@
 import React from 'react'
 import GlobalColorUpdater from '../../components/GlobalColorUpdater'
-import useGlobalState from '../../utils/store';
+import useGlobalState from '../../components/utils/store';
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
