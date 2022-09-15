@@ -11,4 +11,5 @@ body {
     color: var(--primary-text-color);
     background-color: var(--primary-backgroud);
     height: 100%;
+    width: 100%;
 }

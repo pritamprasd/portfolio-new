@@ -1,0 +1,39 @@
+.siteheader{
+    color: var(--primary-color);
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+}
+
+.pagelink{
+    background-color: violet;
+}
+
+.pagecontainer .pagecontainer2{
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+}
+
+.bottom_navbar{
+    position: absolute; 
+    bottom: 0;
+}
+
+.togglenavbar{
+    color: blueviolet;
+}
+
+@media screen and (min-width: 600px) {
+    .togglenavbar  {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pagecontainer  {
+        display: none;
+    }
+}
