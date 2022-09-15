@@ -10,3 +10,10 @@ yarn add next react react-dom
 yarn dev
 
 # Notes:
+#### Data Fetching
+- `getServerSideProps` (SSR): This function will be called by the server on every request.
+- `getStaticProps`(Build Time) : from the same file. This function gets called at build time and lets you pass fetched data to the page's props on pre-render
+- `getStaticPaths` :  Next.js will statically pre-render all the paths specified by getStaticPaths.
+- `useEffect`: client side data fetching
+
+#### 

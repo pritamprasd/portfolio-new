@@ -1,0 +1,11 @@
+:root {
+    --primary-color: rgb(94, 191, 37);
+    --primary-text-color: black;
+}
+
+body {
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    padding: 20px 20px 60px;
+    margin: 0 auto;
+    color: var(--primary-text-color);
+}

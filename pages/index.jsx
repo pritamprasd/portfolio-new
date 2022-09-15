@@ -1,9 +1,7 @@
 import {yamlToJson} from '../utils/transformers'
 import {configUrl} from '../utils/config'
-
-function Index({config}) {
-  return <div>Welcome to Next.js! {config.title}</div>
-}
+import Sidebar from '../containers/sidebar/Sidebar.jsx';
+import MainCanvas from '../containers/main_canvas/MainCanvas';
 
 export async function getStaticProps() {
   const res = await fetch(configUrl).catch(err => console.error(`---1 ${err}`));
@@ -16,5 +14,14 @@ export async function getStaticProps() {
   }
 }
 
+function Index({config}) {
+  return(
+    <div>
+      <div>Welcome to Next.js! {config.title}</div>
+      <Sidebar/>
+      <MainCanvas/>
+    </div>
+  )
+}
 
 export default Index
