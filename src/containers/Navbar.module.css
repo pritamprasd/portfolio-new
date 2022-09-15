@@ -1,29 +1,27 @@
-.siteheader{
-    color: var(--primary-color);
-}
-
 .navbar{
     display: flex;
     flex-direction: column;
+    /* border-right: 2px solid var(--primary-color); */
 }
 
-.pagelink{
-    background-color: violet;
+.siteheader{
+    color: var(--primary-color);
+    min-height: 8rem;
 }
 
 .pagecontainer .pagecontainer2{
     display: flex;
     flex-direction: column;
-    background-color: blue;
+}
+
+.pagelink{
+    height: 2rem;
+    align-content: center;
 }
 
 .bottom_navbar{
     position: absolute; 
     bottom: 0;
-}
-
-.togglenavbar{
-    color: blueviolet;
 }
 
 @media screen and (min-width: 600px) {
@@ -35,5 +33,8 @@
 @media screen and (max-width: 600px) {
     .pagecontainer  {
         display: none;
+    }
+    .navbar{
+        border-right: none
     }
 }
