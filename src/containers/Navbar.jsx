@@ -23,6 +23,7 @@ export function SiteHeader() {
 
 export function PagesContainer({ is_static }) {
   const [config, _] = useGlobalState('config');
+  console.log(config)
   return (
     <div className={is_static}>
       {config.pages.map(p => <PageLink title={p} key={p} />)}
@@ -56,7 +57,7 @@ export function ToggleNavbar() {
       <button className={styles.menubutton} onClick={shownavbar}>
         {isHidden ?  <img src='/icons/arrow-down.svg'/>: <img src='/icons/arrow-up.svg'/>}
       </button>
-      <hr style={{marginBottom: '3rem', borderColor: 'white'}}/>
+      <hr style={{marginBottom: '3rem', marginBottom: '2rem', borderColor: 'white'}}/>
     </div>
   );
 }

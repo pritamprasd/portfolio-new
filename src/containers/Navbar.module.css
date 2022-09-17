@@ -37,6 +37,7 @@
 
 .pagelink:hover{
     background-color: var(--primary-color);
+    border-radius: 10px;
 }
 
 .pagelink:hover{
@@ -52,6 +53,7 @@
     border: none;
     background-color: var(--primary-backgroud);
     padding-left: 45%;
+    padding-top: 2rem;
 }
 
 @media screen and (min-width: 600px) {

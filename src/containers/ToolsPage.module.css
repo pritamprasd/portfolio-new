@@ -1,0 +1,48 @@
+.toolscontainer{
+    padding: 4rem;    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .toolscontainer  {
+        padding: 2rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+.toolsheader{
+    font-size: xx-large;
+    padding: 1rem;
+}
+
+.tooltile{
+    display: flex;    
+    flex-direction: column;
+    border-color: var(--primary-color);
+    border-width: 0.1rem;
+    border-style: solid;
+    padding: 1rem;
+    gap: 1rem;    
+    align-items: center;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.tooltile:hover{
+    background-color: var(--primary-color);
+}
+
+.toolicon{
+    height: 3rem;
+}
+
+.tooltitle{
+    font-weight: bold;      
+}
+
+.tooldesc{
+    grid-area: desc;
+}
+
