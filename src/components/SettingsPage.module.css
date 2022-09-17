@@ -1,0 +1,12 @@
+.settingscontainer{
+    padding: 4rem;    
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    row-gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .settingscontainer  {
+        padding: 2rem;    
+    }
+}

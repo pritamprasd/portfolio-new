@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import GlobalColorUpdater from '../components/GlobalColorUpdater'
 import useGlobalState from '../utils/store';
 import styles from './Navbar.module.css'
 
@@ -11,7 +10,6 @@ export default function Navbar() {
       {!isHidden && <PagesContainer is_static={styles.pagecontainer2} />}
       {isHidden && <PagesContainer is_static={styles.pagecontainer} />}
       <ToggleNavbar />
-      <div className={styles.bottom_navbar}><GlobalColorUpdater /></div>
     </div>
   )
 }
@@ -33,9 +31,11 @@ export function PagesContainer({ is_static }) {
 }
 
 export function PageLink({ title }) {
+  const [isHidden, setIsHidden] = useGlobalState('navbar_hidden');
   const [_, setCurrentView] = useGlobalState('current_view');
   function handlePageLinkClick(){
     setCurrentView(title);
+    setIsHidden(true);
   }
   return (
     <div className={styles.pagelink} onClick={handlePageLinkClick}>

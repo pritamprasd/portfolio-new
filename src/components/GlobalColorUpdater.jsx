@@ -14,7 +14,7 @@ export default function GlobalColorUpdater() {
 
     return (
         <input type="color" id="color-input" onChange={e => colorUpdated(e)}
-            style={{ borderStyle: 'none', width: '1.75rem' }}
+            style={{ borderStyle: 'none', width: '1.75rem', cursor: 'pointer', backgroundColor: 'var(--primary-color)' }}
         />
     )
 }
