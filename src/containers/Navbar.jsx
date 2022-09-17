@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SocialLinks from '../components/SocialLinks';
 import useGlobalState from '../utils/store';
 import styles from './Navbar.module.css'
 
@@ -6,9 +7,11 @@ export default function Navbar() {
   const [isHidden, _] = useGlobalState('navbar_hidden');
   return (
     <div className={styles.navbar}>
-      <SiteHeader />
-      {!isHidden && <PagesContainer is_static={styles.pagecontainer2} />}
-      {isHidden && <PagesContainer is_static={styles.pagecontainer} />}
+      <SiteHeader/>
+      {!isHidden && <SocialLinks/>}
+
+      {!isHidden && <PagesContainer is_static={styles.pagecontainer2}/>}
+      {isHidden && <PagesContainer is_static={styles.pagecontainer} />}      
       <ToggleNavbar />
     </div>
   )
@@ -55,9 +58,9 @@ export function ToggleNavbar() {
   return (
     <div className={styles.togglenavbar}>
       <button className={styles.menubutton} onClick={shownavbar}>
-        {isHidden ?  <img src='/icons/arrow-down.svg'/>: <img src='/icons/arrow-up.svg'/>}
+        {isHidden ?  <img src='/icons/arrow-down.svg'/> : <img src='/icons/arrow-up.svg'/>}
       </button>
-      <hr style={{marginBottom: '3rem', marginBottom: '2rem', borderColor: 'white'}}/>
+      {!isHidden && <hr style={{marginBottom: '3rem', marginBottom: '2rem', borderColor: 'white'}}/>}
     </div>
   );
 }
