@@ -10,20 +10,48 @@
     cursor: pointer;
 }
 
-.pagecontainer .pagecontainer2{
+.pagecontainer{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pagecontainer2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    gap: 1rem;
 }
 
 .pagelink{
-    height: 2rem;
-    align-content: center;
+    height: 2rem;    
     cursor: pointer;
+    width: 70%;    
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.pagelink:hover{
+    background-color: var(--primary-color);
+}
+
+.pagelink:hover{
+    opacity: 1;
 }
 
 .bottom_navbar{
     position: absolute; 
     bottom: 0;
+}
+
+.menubutton{
+    border: none;
+    background-color: var(--primary-backgroud);
+    padding-left: 45%;
 }
 
 @media screen and (min-width: 600px) {

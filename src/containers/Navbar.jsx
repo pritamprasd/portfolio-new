@@ -33,13 +33,15 @@ export function PagesContainer({ is_static }) {
 export function PageLink({ title }) {
   const [isHidden, setIsHidden] = useGlobalState('navbar_hidden');
   const [_, setCurrentView] = useGlobalState('current_view');
+  const path = '/icons/'+ title + '.svg';
   function handlePageLinkClick(){
     setCurrentView(title);
     setIsHidden(true);
   }
   return (
     <div className={styles.pagelink} onClick={handlePageLinkClick}>
-      <div style={{alignItems: 'center'}}>{title}</div>
+      <img src={path}/>
+      <div style={{fontSize: 'x-large'}}>{title}</div>
     </div>
   );
 }
@@ -51,7 +53,10 @@ export function ToggleNavbar() {
   }
   return (
     <div className={styles.togglenavbar}>
-      <button onClick={shownavbar}>{isHidden ? "Show" : "Hide"} Navbar</button>
+      <button className={styles.menubutton} onClick={shownavbar}>
+        {isHidden ?  <img src='/icons/arrow-down.svg'/>: <img src='/icons/arrow-up.svg'/>}
+      </button>
+      <hr style={{marginBottom: '3rem', borderColor: 'white'}}/>
     </div>
   );
 }
