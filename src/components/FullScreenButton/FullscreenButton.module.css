@@ -1,0 +1,11 @@
+.fullscreen_div {
+    float: right;
+    cursor: pointer;
+    padding-right: 4rem;
+}
+
+@media (max-width: 600px) {
+    .fullscreen_div {
+        padding-right: 0;
+    }
+}

@@ -6,7 +6,7 @@
 
 .siteheader{
     color: var(--primary-color);
-    min-height: 8rem;
+    height: 8rem;
     font-size: xxx-large;    
     padding-top: 4rem;
     margin: auto;

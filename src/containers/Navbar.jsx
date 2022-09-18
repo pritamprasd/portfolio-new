@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <div className={styles.navbar}>
       <SiteHeader/>
-      {!isHidden && <SocialLinks/>}
+      <SocialLinks/>
 
       {!isHidden && <PagesContainer is_static={styles.pagecontainer2}/>}
       {isHidden && <PagesContainer is_static={styles.pagecontainer} />}      

@@ -18,9 +18,13 @@ export default function ToolsPage() {
 
 
 export function Tooltile({title,name, desc}){
-  const path = '/icons/'+ title + '.svg'
+  const path = '/icons/'+ title + '.svg';
+  const [_, setCurrentTool] = useGlobalState('current_view');
+  function openTool(){
+    setCurrentTool(title)
+  }
   return(
-    <div className={styles.tooltile}>
+    <div className={styles.tooltile} onClick={openTool}>
       <img src={path} className={styles.toolicon}/>
       <div className={styles.tooltitle}>{name}</div>
       <div className={styles.tooldesc}>{desc}</div>
