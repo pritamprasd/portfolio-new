@@ -38,8 +38,9 @@
 }
 
 .pagelink:hover{
-    background-color: var(--primary-color);
-    border-radius: 10px;
+    /* background-color: var(--primary-color); */
+    border-bottom: solid var(--primary-color) 2px;
+    border-radius: 5px;
 }
 
 .pagelink:hover{
