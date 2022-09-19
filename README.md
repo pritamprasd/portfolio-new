@@ -25,3 +25,12 @@ yarn dev
 ### Updated site config gist??
 - update RAW url in config.js
 
+
+### TODO:
+- PWA
+- Text editor
+- Code editor
+- Transformers
+- Network Information
+- Webrtc call
+
