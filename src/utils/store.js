@@ -7,7 +7,8 @@ const initial_default_config = await get_config();
 const initialState = {
     config: initial_default_config,
     navbar_hidden: false,
-    current_view: 'default'
+    current_view: 'default',
+    git_username: 'pritamprasd'
 };
 const { useGlobalState } = createGlobalState(initialState);
 

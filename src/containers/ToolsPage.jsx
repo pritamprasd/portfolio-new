@@ -10,7 +10,7 @@ export default function ToolsPage() {
     <div>
       <div className={styles.toolsheader}>Tools</div>
       <div className={styles.toolscontainer}>
-        {toolsdesc.map(t => <Tooltile title={t} name={config.descriptions[t].name} desc={config.descriptions[t].description}/>)}
+        {toolsdesc.map(t => <Tooltile key={t} title={t} name={config.descriptions[t].name} desc={config.descriptions[t].description}/>)}
       </div>
     </div>
   )
