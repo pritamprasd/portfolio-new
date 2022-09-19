@@ -37,13 +37,14 @@ export default function GithubSummary() {
     }
 
     return (
-        <div className={styles.githubsummarycontainer}>
+        <div className={styles.githubsummarycontainer}>            
             <div className={styles.header}>
-                <input className={styles.usernameinput} type='text' onKeyDown={onInputChange}/>
+                <div>Github Username: </div>
+                <input className={styles.usernameinput} type='text' onChange={onInputChange}/>
                 <div className={styles.searchbutton} onClick={onSearchButtonClick}><img src='/icons/search.svg'/></div>
-            </div>
-            <hr/>
-            <div>
+            </div>            
+            <div className={styles.content}>
+                <hr/>
                 {projects?.map(p => <div key={p['reponame']}>{JSON.stringify(p)}</div>)}
             </div>
         </div>

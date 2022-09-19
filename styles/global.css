@@ -20,3 +20,9 @@ hr{
     margin-bottom: 2rem;
     border-color: var(--primary-color);    
 }
+
+.tooltitle{
+    font-size: xx-large;
+    color: var(--primary-color);
+    padding-bottom: 3rem;
+}

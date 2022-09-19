@@ -7,13 +7,15 @@ import GithubSummary from '../tools/github_summary/GithubSummary';
 import TextEditor from '../tools/text_editor/TextEditor';
 import FullscreenButton from '../components/FullScreenButton/FullscreenButton';
 import NetworkInformation from '../tools/network-information/NetworkInformation';
+import ToolGlobalHeader from '../components/ToolGlobalHeader';
 
 export default function MainCanvas() {
-  const [current_view, _] = useGlobalState('current_view');
+  const [current_view, _] = useGlobalState('current_view');  
   
   return (
     <div>
       {/* <FullscreenButton/> */}
+      <ToolGlobalHeader/>      
 
       {current_view === 'default' && <WelcomeScreen/>}
       {current_view === 'tools' && <ToolsPage/>}

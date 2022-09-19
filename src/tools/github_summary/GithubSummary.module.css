@@ -1,5 +1,7 @@
 .githubsummarycontainer{
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .header{
@@ -7,7 +9,9 @@
     flex-direction: row;    
     width: 100%;
     gap: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1rem;    
+    justify-content: center;
+    align-items: center;    
 }
 
 .searchbutton{
@@ -21,5 +25,9 @@
 }
 
 .usernameinput{
+    width: 50%;
+}
+
+.content{
 
 }
