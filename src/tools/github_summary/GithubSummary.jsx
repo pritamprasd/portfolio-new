@@ -13,7 +13,7 @@ export default function GithubSummary() {
             var projects = await getAllRepoBy(username);
             if (projects == null || projects.length < 1) {
                 console.log(`Username: ${username} not found in db.`)
-                await getRepoInfoAndSaveToDb(username);                
+                await getRepoInfoAndSaveToDb(username);
             }
             projects = await getAllRepoBy(username);
             setProjects(projects);
@@ -25,28 +25,39 @@ export default function GithubSummary() {
         console.log(`projects: ${JSON.stringify(projects)}`);
     }, [projects]);
 
-    function onInputChange(e){
+    function onInputChange(e) {
         setLiveUsername(e.target.value);
         if (e.keyCode === 13) {
             setUsername(e.target.value);
         }
     }
 
-    function onSearchButtonClick(){
+    function onSearchButtonClick() {
         setUsername(liveUsername);
     }
 
     return (
-        <div className={styles.githubsummarycontainer}>            
+        <div className={styles.githubsummarycontainer}>
             <div className={styles.header}>
                 <div>Github Username: </div>
-                <input className={styles.usernameinput} type='text' onChange={onInputChange}/>
-                <div className={styles.searchbutton} onClick={onSearchButtonClick}><img src='/icons/search.svg'/></div>
-            </div>            
+                <input className={styles.usernameinput} type='text' onChange={onInputChange} />
+                <div className={styles.searchbutton} onClick={onSearchButtonClick}><img src='/icons/search.svg' /></div>
+            </div>
             <div className={styles.content}>
-                <hr/>
-                {projects?.map(p => <div key={p['reponame']}>{JSON.stringify(p)}</div>)}
+                {projects?.map(p => <ProjectTile project={p} />)}
             </div>
         </div>
     )
+}
+
+function ProjectTile({ project }) {
+    return (
+        <div key={project['reponame']} className={styles.projecttile}>
+            <div>{project['reponame']}</div>
+            <div>{project['description']}</div>
+            <div>{project['topics']}</div>
+            <div>{project['created_at']}</div>
+            <div>{project['watchers']}</div>
+        </div>
+    );
 }

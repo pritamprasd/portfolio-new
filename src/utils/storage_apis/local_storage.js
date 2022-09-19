@@ -1,4 +1,4 @@
-import { isRunningOnClient } from "../utils/nextjs";
+import { isRunningOnClient } from "../nextjs";
 
 export function getFromLS(key, type="default"){  
     if(isRunningOnClient())  {

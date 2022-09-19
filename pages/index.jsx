@@ -3,16 +3,6 @@ import Navbar from '../src/containers/Navbar.jsx';
 import MainCanvas from '../src/containers/MainCanvas';
 import styles from './index.module.css'
 
-// export async function getStaticProps() {
-//   console.log(`NEXT_PUBLIC_SAMPLE_ENV: ${process.env.NEXT_PUBLIC_SAMPLE_ENV}`)
-//   const config = await get_config();
-//   return {
-//     props: {
-//       config
-//     },
-//   }
-// }
-
 function Index() {
   return (
     <div className={styles.global_window}>

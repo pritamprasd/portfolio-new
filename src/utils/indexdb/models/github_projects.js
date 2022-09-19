@@ -1,6 +1,6 @@
 import db from "..";
 
-export async function addGithubRepository(username, repo, topics, url, created_at, forks, open_issues, watchers) {
+export async function addGithubRepository(username, repo, topics, url, created_at, forks, open_issues, watchers, description) {
     console.log(`Saving project row for repo: ${repo}`);
     const projectInfo = {
         username: username,
@@ -10,7 +10,8 @@ export async function addGithubRepository(username, repo, topics, url, created_a
         created_at: created_at,
         forks: forks,
         open_issues: open_issues,
-        watchers: watchers
+        watchers: watchers,
+        description: description
     }
     await db.github_projects.where("username").equals(username).delete().then(
         function (deleteCount) {

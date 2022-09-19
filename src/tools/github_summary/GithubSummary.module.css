@@ -29,5 +29,34 @@
 }
 
 .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 2rem;
+    gap: 2rem;
+}
 
+.projecttile{
+    border: solid var(--primary-color) 0.1rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: grid;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .content  {        
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .content  {        
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content  {        
+        grid-template-columns: 1fr;
+    }
 }
