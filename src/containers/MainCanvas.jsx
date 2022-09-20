@@ -9,6 +9,7 @@ import FullscreenButton from '../components/FullScreenButton/FullscreenButton';
 import NetworkInformation from '../tools/network-information/NetworkInformation';
 import ToolGlobalHeader from '../components/ToolGlobalHeader';
 import styles from './MainCanvas.module.css'
+import IndexDBCleanup from '../components/IndexDBCleanup';
 
 export default function MainCanvas() {
   const [current_view, _] = useGlobalState('current_view');
@@ -24,6 +25,8 @@ export default function MainCanvas() {
       {current_view === 'network_information' && <NetworkInformation />}
       {current_view === 'github_summary' && <GithubSummary />}
       {current_view === 'rich_editor' && <TextEditor />}
+
+      {current_view === 'indexdb-cleanup' && <IndexDBCleanup/>}
 
       {/* <FullscreenButton/> */}
 

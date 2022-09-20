@@ -1,0 +1,25 @@
+.dbcleanupcontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 2rem;
+    align-items: center;
+    font-size: x-large;
+}
+
+.content{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tablesetting{
+    display: flex;
+    flex-direction: row;    
+    gap: 4rem;
+}
