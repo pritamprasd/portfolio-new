@@ -26,7 +26,6 @@ export default function GithubSummary() {
     // }, [projects]);
 
     function onInputChange(e) {
-        console.log(`Input changed: ${e.target.value}`);
         setLiveUsername(e.target.value);
         if (e.key === 'Enter' || e.keyCode === 13) {
             setUsername(e.target.value);
@@ -51,7 +50,6 @@ export default function GithubSummary() {
 
 function ProjectTile({ project }) {
     const cre_date = new Date(project['created_at']);
-    console.log(cre_date)
     return (
         <div className={styles.projecttile}>
             <div className={styles.projecttitle}>{project['reponame']}</div>

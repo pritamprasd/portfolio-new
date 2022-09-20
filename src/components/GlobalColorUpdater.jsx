@@ -1,6 +1,6 @@
 import { React, useEffect } from 'react'
 import swal from 'sweetalert';
-import { getFromLS, setToLS } from '../utils/storage_apis/local_storage';
+import { setToLS } from '../utils/local_storage';
 
 export default function GlobalColorUpdater() {
     function colorUpdated(e) {
