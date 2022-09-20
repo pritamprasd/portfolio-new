@@ -1,6 +1,11 @@
 .maincanvascontainer{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 16fr;
     padding: 0.5rem;
+}
+
+@media screen and (min-width: 600px) {
+    .maincanvascontainer  {        
+        grid-template-rows: 1fr 20fr;
+    }
 }

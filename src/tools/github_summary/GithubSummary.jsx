@@ -21,43 +21,53 @@ export default function GithubSummary() {
         update_projects();
     }, [username]);
 
-    useEffect(() => {
-        console.log(`projects: ${JSON.stringify(projects)}`);
-    }, [projects]);
+    // useEffect(() => {
+    //     console.log(`projects: ${JSON.stringify(projects)}`);
+    // }, [projects]);
 
     function onInputChange(e) {
+        console.log(`Input changed: ${e.target.value}`);
         setLiveUsername(e.target.value);
-        if (e.keyCode === 13) {
+        if (e.key === 'Enter' || e.keyCode === 13) {
             setUsername(e.target.value);
         }
     }
 
-    function onSearchButtonClick() {
-        setUsername(liveUsername);
-    }
+
 
     return (
         <div className={styles.githubsummarycontainer}>
             <div className={styles.header}>
-                <div>Github Username: </div>
-                <input className={styles.usernameinput} type='text' onChange={onInputChange} />
-                <div className={styles.searchbutton} onClick={onSearchButtonClick}><img src='/icons/search.svg' /></div>
+                <div style={{ fontSize: 'large' }}>Username: </div>
+                <input className={styles.usernameinput} type='text' onKeyUp={onInputChange} />
+                <div className={styles.searchbutton} onClick={() => setUsername(liveUsername)}><img src='/icons/search.svg' /></div>
             </div>
             <div className={styles.content}>
-                {projects?.map(p => <ProjectTile project={p} />)}
+                {projects?.map(p => <ProjectTile key={p['reponame']} project={p} />)}
             </div>
         </div>
     )
 }
 
 function ProjectTile({ project }) {
+    const cre_date = new Date(project['created_at']);
+    console.log(cre_date)
     return (
-        <div key={project['reponame']} className={styles.projecttile}>
+        <div className={styles.projecttile}>
             <div className={styles.projecttitle}>{project['reponame']}</div>
             <div className={styles.projectdesc}>{project['description']}</div>
-            <div className={styles.projecttopics}>{JSON.stringify(project['topics'])}</div>
-            <div>{project['created_at']}</div>
-            <div>{project['watchers']}</div>
+            <ProjectTopics topics={project['topics']} />
+            <div className={styles.watchers}>Watchers: {project['watchers']}</div>
+            <div className={styles.created_date}>Created: {cre_date.getFullYear()}-{cre_date.getMonth() + 1}-{cre_date.getDate()}</div>            
         </div>
     );
 }
+
+export function ProjectTopics({ topics }) {
+    return (
+        <div className={styles.topicscontainer}>
+            {topics?.map(t => <div key={t}>{t}</div>)}
+        </div>
+    )
+}
+

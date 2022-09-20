@@ -23,7 +23,7 @@ export default function ToolGlobalHeader() {
         cursor: 'pointer',
         gap: '1rem',
         alignItems: 'flex-start',
-        paddingBottom: '2rem'
+        padding: '1rem',
     }
 
     const toolTitleStyle = {
