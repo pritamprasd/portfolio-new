@@ -6,8 +6,8 @@ import styles from './index.module.css'
 function Index() {
   return (
     <div className={styles.global_window}>
-      <Navbar className={styles.main_nav} />
-      <MainCanvas className={styles.main_view} />
+      <Navbar/>
+      <MainCanvas/>
     </div>
   )
 }

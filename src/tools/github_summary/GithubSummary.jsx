@@ -53,9 +53,9 @@ export default function GithubSummary() {
 function ProjectTile({ project }) {
     return (
         <div key={project['reponame']} className={styles.projecttile}>
-            <div>{project['reponame']}</div>
-            <div>{project['description']}</div>
-            <div>{project['topics']}</div>
+            <div className={styles.projecttitle}>{project['reponame']}</div>
+            <div className={styles.projectdesc}>{project['description']}</div>
+            <div className={styles.projecttopics}>{JSON.stringify(project['topics'])}</div>
             <div>{project['created_at']}</div>
             <div>{project['watchers']}</div>
         </div>

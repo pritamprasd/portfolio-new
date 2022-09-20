@@ -1,80 +1,74 @@
-.navbar{
-    display: flex;
-    flex-direction: column;
-    /* border-right: 2px solid var(--primary-color); */
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0.5rem;    
+    /* border-right: 2px solid var(--primary-color); */    
 }
 
-.siteheader{
+.siteheader {
     color: var(--primary-color);
-    height: 8rem;
-    font-size: xxx-large;    
-    padding-top: 4rem;
-    margin: auto;
+    font-size: xxx-large;
+    padding: 2rem;
 }
 
-.pagecontainer{
+.pagecontainer {
     display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
 
-.pagecontainer2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;    
-    gap: 1rem;
-}
-
-.pagelink{
-    height: 2rem;    
+.pagelink {
+    height: 2rem;
     cursor: pointer;
-    width: 70%;    
+    width: 70%;
     display: flex;
     gap: 1rem;
     align-items: center;
 }
 
-.pagelink:hover{
-    /* background-color: var(--primary-color); */
+.pagelink:hover {
     border-bottom: solid var(--primary-color) 2px;
     border-radius: 5px;
 }
 
-.pagelink:hover{
+.pagelink:hover {
     opacity: 1;
 }
 
-.bottom_navbar{
-    position: absolute; 
+.bottom_navbar {
+    position: absolute;
     bottom: 0;
 }
 
-.menubutton{
+.menubutton {
     border: none;
     background-color: var(--primary-backgroud);
     padding-left: 48%;
-    padding-top: 2rem;    
+    padding-top: 2rem;
 }
 
-.sociallinks > a{
+.sociallinks>a {
     padding: 1rem;
     padding-top: 4rem;
 }
 
 @media screen and (min-width: 600px) {
-    .togglenavbar  {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .pagecontainer  {
+    .togglenavbar {
         display: none;
     }
     .navbar{
-        border-right: none
+        height: calc(100vh - 100px);
+        grid-template-rows: 1fr 3fr;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .siteheader {
+        font-size: xxx-large;
     }
 }

@@ -2,6 +2,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    /* height: 100vh; */
 }
 
 .header{
@@ -40,7 +42,32 @@
     border-radius: 0.5rem;
     padding: 1rem;
     display: grid;
+    grid-template-areas: "titl titl titl"
+                         "desc desc desc"
+                         "desc desc desc"
+                         "topi topi topi"
+                         "crat crat watc";
     cursor: pointer;
+    gap: 0.1rem;
+}
+
+.projecttile:hover{
+    background-color: var(--primary-color);
+}
+
+.projecttitle{
+    font-size: x-large;
+    font-weight: bold;
+    grid-area: titl;
+}
+
+.projectdesc{
+    grid-area: desc;
+    font-weight: lighter;
+}
+
+.projecttopics{
+    grid-area: topi;
 }
 
 @media screen and (max-width: 1200px) {

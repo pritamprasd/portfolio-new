@@ -2,7 +2,7 @@ import Dexie from "dexie";
 
 const db = new Dexie(process.env.NEXT_PUBLIC_INDEXDB_NAME);
 
-db.version(2).stores({
+db.version(3).stores({
     github_projects: "++id, username, reponame, *topics",
 });
 

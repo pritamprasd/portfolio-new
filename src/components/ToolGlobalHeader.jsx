@@ -22,7 +22,12 @@ export default function ToolGlobalHeader() {
         flexDirection: 'row',
         cursor: 'pointer',
         gap: '1rem',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        paddingBottom: '2rem'
+    }
+
+    const toolTitleStyle = {
+        fontSize: 'x-large'
     }
 
     return (
@@ -30,7 +35,7 @@ export default function ToolGlobalHeader() {
             {showBackButton &&
                 <div style={headerstyle}>
                     <img onClick={() => setCurrentView('tools')} src='/icons/back.svg' />
-                    <div className='tooltitle'>{title}</div>
+                    <div style={toolTitleStyle}>{title}</div>
                 </div>
             }
         </>

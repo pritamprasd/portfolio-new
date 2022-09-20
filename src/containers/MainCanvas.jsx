@@ -8,22 +8,25 @@ import TextEditor from '../tools/text_editor/TextEditor';
 import FullscreenButton from '../components/FullScreenButton/FullscreenButton';
 import NetworkInformation from '../tools/network-information/NetworkInformation';
 import ToolGlobalHeader from '../components/ToolGlobalHeader';
+import styles from './MainCanvas.module.css'
 
 export default function MainCanvas() {
-  const [current_view, _] = useGlobalState('current_view');  
-  
+  const [current_view, _] = useGlobalState('current_view');
+
   return (
-    <div>
+    <div className={styles.maincanvascontainer}>
+      <ToolGlobalHeader />
+
+      {current_view === 'default' && <WelcomeScreen />}
+      {current_view === 'tools' && <ToolsPage />}
+      {current_view === 'settings' && <SettingsPage />}
+
+      {current_view === 'network_information' && <NetworkInformation />}
+      {current_view === 'github_summary' && <GithubSummary />}
+      {current_view === 'rich_editor' && <TextEditor />}
+
       {/* <FullscreenButton/> */}
-      <ToolGlobalHeader/>      
 
-      {current_view === 'default' && <WelcomeScreen/>}
-      {current_view === 'tools' && <ToolsPage/>}
-      {current_view === 'settings' && <SettingsPage/>}      
-
-      {current_view === 'network_information' && <NetworkInformation/>}
-      {current_view === 'github_summary' && <GithubSummary/>}
-      {current_view === 'rich_editor' && <TextEditor/>}      
     </div>
   )
 }
