@@ -4,13 +4,13 @@
     "description": "Demo site for webapi experiments",
     "icons": [
       {
-        "src": "/icon192.png",
+        "src": "/icons/icon192.png",
         "sizes": "192x192",
         "type": "image/png"
       },
   
       {
-        "src": "/icon512.png",
+        "src": "/icons/icon512.png",
         "sizes": "512x512",
         "type": "image/png"
       }
@@ -18,7 +18,7 @@
     "theme_color": "#000",
     "background_color": "#fff",
     "start_url": "/",
-    "scope": ".",
+    "scope": "/",
     "display": "standalone",
     "orientation": "portrait"
   }

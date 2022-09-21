@@ -27,7 +27,7 @@ export function PagesContainer({ is_static }) {
   console.log(config)
   return (
     <div className={styles.pagecontainer}>
-      {config.pages.map(p => <PageLink title={p} key={p} />)}
+      {config.pages?.map(p => <PageLink title={p} key={p} />)}
     </div>
   );
 }

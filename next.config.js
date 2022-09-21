@@ -1,27 +1,22 @@
-const withPWA = require('next-pwa')({
-    dest: 'public'
-  });
-  
+const withPWA = require('next-pwa');
+const runtimeCaching = require('next-pwa/cache');
+
 module.exports = withPWA({
     pwa: {
         dest: "public",
-        register: true,
-        skipWaiting: true,
-        mode: 'production',
-        fallbacks: {
-            image: '/icons/back.svg',
-        }
+        runtimeCaching,
     },
 });
 
-module.exports = {
-    ...module.exports,
-    webpack: (config) => {
+const webpakConfig = {
+    webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
         config.experiments = {
             ...config.experiments,
             ...{ topLevelAwait: true }
         };
         return config;
     },
-}
+};
+
+module.exports = Object.assign({}, module.exports, webpakConfig);
 
