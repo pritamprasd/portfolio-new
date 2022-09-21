@@ -7,6 +7,10 @@ module.exports = withPWA({
         dest: "public",
         register: true,
         skipWaiting: true,
+        mode: 'production',
+        fallbacks: {
+            image: '/icons/back.svg',
+        }
     },
 });
 
@@ -20,16 +24,4 @@ module.exports = {
         return config;
     },
 }
-
-// const webpakConfig = {
-//     webpack: (config) => {
-//         config.experiments = {
-//             ...config.experiments,
-//             ...{ topLevelAwait: true }
-//         };
-//         return config;
-//     },
-// };
-
-// module.exports = Object.assign({}, module.exports, webpakConfig);
 

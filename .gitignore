@@ -2,3 +2,9 @@
 node_modules/
 yarn-error*
 .env.local
+
+
+**/public/workbox-*.js
+**/public/sw.js
+**/public/fallback-*.js
+
