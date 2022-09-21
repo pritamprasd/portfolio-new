@@ -13,8 +13,7 @@ export default function IndexDBCleanup() {
             setallTables(tableNames);
         }
         gelAllTable();
-    }, [])
-
+    }, []);
     return (
         <div className={styles.dbcleanupcontainer}>
             <div className={styles.header}>

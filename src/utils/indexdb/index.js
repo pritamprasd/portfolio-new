@@ -11,10 +11,10 @@ export default db;
 // github_projects: ++id, username, &reponame, *topics, url, created_at, forks, open_issues, watchers 
 
 
-export async function getAllTableNames(){
+export async function getAllTableNames() {
     return await db.tables;
 }
 
-export async function purgeTable(){
+export async function purgeTable() {
     db.github_projects.clear();
 }
