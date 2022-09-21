@@ -24,7 +24,7 @@ export function SiteHeader() {
 
 export function PagesContainer({ is_static }) {
   const [config, _] = useGlobalState('config');
-  console.log(config)
+  // console.log(config)
   return (
     <div className={styles.pagecontainer}>
       {config.pages?.map(p => <PageLink title={p} key={p} />)}

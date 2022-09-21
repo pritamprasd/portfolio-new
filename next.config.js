@@ -5,18 +5,19 @@ module.exports = withPWA({
     pwa: {
         dest: "public",
         runtimeCaching,
+        mode: 'production',
     },
 });
 
-const webpakConfig = {
-    webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
-        config.experiments = {
-            ...config.experiments,
-            ...{ topLevelAwait: true }
-        };
-        return config;
-    },
-};
+// const webpakConfig = {
+//     webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
+//         config.experiments = {
+//             ...config.experiments,
+//             ...{ topLevelAwait: true }
+//         };
+//         return config;
+//     },
+// };
 
-module.exports = Object.assign({}, module.exports, webpakConfig);
+// module.exports = Object.assign({}, module.exports, webpakConfig);
 

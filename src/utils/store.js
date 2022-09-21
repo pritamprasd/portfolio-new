@@ -1,9 +1,14 @@
 import { React } from 'react';
 import { createGlobalState } from 'react-hooks-global-state';
-import { get_config } from './config'
+
+const default_config = {
+    descriptions: {
+        current_view: 'default'
+    }
+}
 
 const initialState = {
-    config: await get_config(),
+    config: default_config,
     navbar_hidden: false,
     current_view: 'default',
     git_username: 'pritamprasd'
@@ -11,3 +16,4 @@ const initialState = {
 const { useGlobalState } = createGlobalState(initialState);
 
 export default useGlobalState;
+
