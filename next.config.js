@@ -10,7 +10,8 @@ module.exports = withPWA({
     },
 });
 
-const webpakConfig = {
+module.exports = {
+    ...module.exports,
     webpack: (config) => {
         config.experiments = {
             ...config.experiments,
@@ -18,7 +19,17 @@ const webpakConfig = {
         };
         return config;
     },
-};
+}
 
-module.exports = Object.assign({}, module.exports, webpakConfig);
+// const webpakConfig = {
+//     webpack: (config) => {
+//         config.experiments = {
+//             ...config.experiments,
+//             ...{ topLevelAwait: true }
+//         };
+//         return config;
+//     },
+// };
+
+// module.exports = Object.assign({}, module.exports, webpakConfig);
 
