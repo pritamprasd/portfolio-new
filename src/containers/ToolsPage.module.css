@@ -5,14 +5,14 @@
     gap: 2rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1360px) {
     .toolscontainer  {
         padding: 1.5rem;
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1040px) {
     .toolscontainer  {
         padding: 1rem;
         grid-template-columns: 1fr 1fr;
@@ -29,6 +29,7 @@
 .toolsheader{
     font-size: xx-large;    
     color: var(--primary-color);
+    padding-top: 2rem;
 }
 
 .tooltile{

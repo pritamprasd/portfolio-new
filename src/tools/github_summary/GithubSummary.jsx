@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { getRepoInfoAndSaveToDb } from '../../utils/apis/github';
 import { getAllRepoBy } from '../../utils/indexdb/models/github_projects';
 import useGlobalState from '../../utils/store';
-import styles from './GithubSummary.module.css'
+import styles from './GithubSummary.module.css';
+import ProjectModal from './ProjectModal';
 
 export default function GithubSummary() {
     const [username, setUsername] = useGlobalState('git_username');
@@ -20,7 +21,6 @@ export default function GithubSummary() {
         }
         update_projects();
     }, [username]);
-
     // useEffect(() => {
     //     console.log(`projects: ${JSON.stringify(projects)}`);
     // }, [projects]);
@@ -31,9 +31,6 @@ export default function GithubSummary() {
             setUsername(e.target.value);
         }
     }
-
-
-
     return (
         <div className={styles.githubsummarycontainer}>
             <div className={styles.header}>
@@ -50,13 +47,18 @@ export default function GithubSummary() {
 
 function ProjectTile({ project }) {
     const cre_date = new Date(project['created_at']);
+    const [showModal, setShowModal] = useState(false);
+    function toggleShowModal(){
+        setShowModal(!showModal);
+    }
     return (
-        <div className={styles.projecttile}>
+        <div className={styles.projecttile} onClick={toggleShowModal}>
+            {showModal && <ProjectModal toggleShowModal={toggleShowModal} project={project}/>}
             <div className={styles.projecttitle}>{project['reponame']}</div>
             <div className={styles.projectdesc}>{project['description']}</div>
             <ProjectTopics topics={project['topics']} />
             <div className={styles.watchers}>Watchers: {project['watchers']}</div>
-            <div className={styles.created_date}>Created: {cre_date.getFullYear()}-{cre_date.getMonth() + 1}-{cre_date.getDate()}</div>            
+            <div className={styles.created_date}>Created: {cre_date.getFullYear()}-{cre_date.getMonth() + 1}-{cre_date.getDate()}</div>
         </div>
     );
 }

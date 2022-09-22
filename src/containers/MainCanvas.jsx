@@ -10,6 +10,7 @@ import NetworkInformation from '../tools/network-information/NetworkInformation'
 import ToolGlobalHeader from '../components/ToolGlobalHeader';
 import styles from './MainCanvas.module.css'
 import IndexDBCleanup from '../components/IndexDBCleanup';
+import LocalStorageCleanup from '../components/LocalStorageCleanup';
 
 export default function MainCanvas() {
   const [current_view, _] = useGlobalState('current_view');
@@ -27,6 +28,7 @@ export default function MainCanvas() {
       {current_view === 'rich_editor' && <TextEditor />}
 
       {current_view === 'indexdb-cleanup' && <IndexDBCleanup/>}
+      {current_view === 'ls-cleanup' && <LocalStorageCleanup/>}      
 
       {/* <FullscreenButton/> */}
 
