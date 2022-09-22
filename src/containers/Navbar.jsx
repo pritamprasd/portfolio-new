@@ -18,7 +18,9 @@ export default function Navbar() {
 export function SiteHeader() {
   const [_, setCurrentView] = useGlobalState('current_view');
   return (
-    <div className={styles.siteheader} onClick={() => setCurrentView("default")}>pritam.dev</div>
+    <div className={styles.siteheader} onClick={() => setCurrentView("default")}>
+      <img src='/icons/icon192.png'/>
+    </div>
   );
 }
 

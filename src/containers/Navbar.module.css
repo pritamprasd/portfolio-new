@@ -9,6 +9,8 @@
     color: var(--primary-color);
     font-size: xxx-large;
     padding: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .pagecontainer {
@@ -27,16 +29,14 @@
     width: 70%;
     display: flex;
     gap: 1rem;
-    align-items: center;
+    align-items: center;   
+    padding-left: 3rem; 
 }
 
 .pagelink:hover {
-    border-bottom: solid var(--primary-color) 2px;
-    border-radius: 5px;
-}
-
-.pagelink:hover {
-    opacity: 1;
+    /* border-bottom: solid var(--primary-color) 2px; */
+    /* border-radius: 5px; */
+    color: var(--primary-color);
 }
 
 .bottom_navbar {

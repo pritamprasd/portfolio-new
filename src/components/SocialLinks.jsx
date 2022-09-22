@@ -6,8 +6,8 @@ export default function SocialLinks() {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: '2rem',
-        padding: '2rem'        
+        gap: '3rem',
+        padding: '1rem',
     }
     return (
         <div style={linkStyles}>
