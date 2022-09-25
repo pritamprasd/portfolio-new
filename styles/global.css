@@ -21,3 +21,21 @@ hr {
     margin-right: 2rem;
     margin-left: 2rem;
 }
+
+button{
+    border: none;
+    background-color: white;
+    color: var(--primary-color);
+    min-height: 1.5rem;    
+    cursor: pointer;
+    padding: 0.5rem;    
+    border-radius: 0.2rem;
+    border-color: var(--primary-color);
+    border-style: solid;
+    border-width: 0.08rem;
+}
+
+button:focus, button:active{
+    background-color: var(--primary-color);
+    color: white;
+}
