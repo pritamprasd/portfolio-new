@@ -27,8 +27,8 @@ export default function MainCanvas() {
       {current_view === 'github_summary' && <GithubSummary />}
       {current_view === 'rich_editor' && <TextEditor />}
 
-      {current_view === 'indexdb-cleanup' && <IndexDBCleanup/>}
-      {current_view === 'ls-cleanup' && <LocalStorageCleanup/>}      
+      {current_view === 'indexdb-cleanup' && <IndexDBCleanup />}
+      {current_view === 'ls-cleanup' && <LocalStorageCleanup />}
 
       {/* <FullscreenButton/> */}
 

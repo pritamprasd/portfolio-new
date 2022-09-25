@@ -60,10 +60,9 @@ export function ToggleNavbar() {
   }
   return (
     <div className={styles.togglenavbar}>
-      <button className={styles.menubutton} onClick={shownavbar}>
+      <div className={styles.menubutton} onClick={shownavbar}>
         {isHidden ? <img src='/icons/arrow-down.svg' /> : <img src='/icons/arrow-up.svg' />}
-      </button>
-      {!isHidden && <hr />}
+      </div>
     </div>
   );
 }

@@ -1,12 +1,26 @@
 .global_window {
-    display: grid;
-    /* width: 100vw; */
-    /* height: 100vh; */
-    grid-template-columns: 1fr 8fr;    
+    display: grid;    
+    grid-template-columns: 1fr 8fr;
+    /* grid-template-rows: 4rem; */
+    grid-template-areas: "navb hedr"
+                         "navb mcan";
+}
+
+.navbar{
+    grid-area: navb;
+}
+
+.page_header{
+    grid-area: hedr;
+}
+
+.maincanvascontainer{
+    grid-area: mcan;
 }
 
 @media screen and (max-width: 600px) {
     .global_window  {
-        grid-template-columns: 1fr;
+        display: flex;
+        align-items: center;
     }
 }

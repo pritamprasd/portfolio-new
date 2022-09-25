@@ -3,6 +3,7 @@ import Navbar from '../src/containers/Navbar.jsx';
 import MainCanvas from '../src/containers/MainCanvas';
 import styles from './index.module.css'
 import { getFromLS } from '../src/utils/local_storage.js';
+import PageHeader from '../src/containers/PageHeader.jsx';
 
 function Index() {
   // useEffect(() => {
@@ -15,8 +16,9 @@ function Index() {
   
   return (
     <div className={styles.global_window}>
-      <Navbar/>
-      <MainCanvas/>
+      <Navbar className={styles.navbar}/>
+      <PageHeader className={styles.page_header} id="tools" backButtonPage="default"/>
+      <MainCanvas className={styles.main_body}/>
     </div>
   )
 }

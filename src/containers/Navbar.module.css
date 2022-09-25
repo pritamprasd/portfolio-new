@@ -48,9 +48,12 @@
 
 .menubutton {
     border: none;
-    background-color: var(--primary-backgroud);
-    padding-left: 48%;
-    padding-top: 2rem;
+    background-color: var(--primary-color);
+    height: 2rem;
+    width: 100%;
+    padding-left: 45%;
+    align-items: center;
+    display: flex;
 }
 
 .sociallinks>a {
