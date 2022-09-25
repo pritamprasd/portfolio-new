@@ -12,11 +12,11 @@ export default function SettingsPage() {
                 <div>Site Accent color</div>
                 <div><GlobalColorUpdater /></div>
 
-                <td>Database Cleanup(IndexDB)</td>
-                <td><button onClick={() => setCurrentView('indexdb-cleanup')}>View</button></td>
+                <div>Database Cleanup(IndexDB)</div>
+                <div><button onClick={() => setCurrentView('indexdb-cleanup')}>View</button></div>
 
-                <td>Local Storage Cleanup(IndexDB)</td>
-                <td><button onClick={() => setCurrentView('ls-cleanup')}>Clean</button></td>
+                <div>Local Storage Cleanup(IndexDB)</div>
+                <div><button onClick={() => setCurrentView('ls-cleanup')}>Clean</button></div>
             </div>
         </div>
     )

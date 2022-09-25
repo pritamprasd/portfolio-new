@@ -8,7 +8,6 @@ import TextEditor from '../tools/text_editor/TextEditor';
 import FullscreenButton from '../components/FullScreenButton/FullscreenButton';
 import NetworkInformation from '../tools/network-information/NetworkInformation';
 import ToolGlobalHeader from '../components/ToolGlobalHeader';
-import styles from './MainCanvas.module.css'
 import IndexDBCleanup from '../components/IndexDBCleanup';
 import LocalStorageCleanup from '../components/LocalStorageCleanup';
 
@@ -16,10 +15,8 @@ export default function MainCanvas() {
   const [current_view, _] = useGlobalState('current_view');
 
   return (
-    <div className={styles.maincanvascontainer}>
-      <ToolGlobalHeader />
-
-      {current_view === 'default' && <WelcomeScreen />}
+    <div>
+      {current_view === 'home' && <WelcomeScreen />}
       {current_view === 'tools' && <ToolsPage />}
       {current_view === 'settings' && <SettingsPage />}
 
@@ -31,7 +28,6 @@ export default function MainCanvas() {
       {current_view === 'ls-cleanup' && <LocalStorageCleanup />}
 
       {/* <FullscreenButton/> */}
-
     </div>
   )
 }
