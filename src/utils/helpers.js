@@ -11,3 +11,8 @@ export function isMobilePortrait() {
     }
     return false
 }
+
+export async function getIpv4(){
+    const address = await fetch('http://ipv4.icanhazip.com').then(r => r.text()).catch(e => alert("Pe po pe po.. "+ JSON.stringify(e)));
+    return address;
+}

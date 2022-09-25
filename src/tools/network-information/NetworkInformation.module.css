@@ -1,5 +1,24 @@
 .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.container>div{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: space-between;
+    box-shadow: 4px 4px 8px var(--primary-color);
+}
+
+.container>div>div:first-child{
+    font-weight: bolder;
+}
+
+@media screen and (min-width: 600px) {
+    .container>div{
+        padding-left: 4rem;
+        padding-right: 2rem;
+    }
 }
