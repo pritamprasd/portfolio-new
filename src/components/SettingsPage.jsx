@@ -7,7 +7,6 @@ export default function SettingsPage() {
     const [_, setCurrentView] = useGlobalState('current_view');
     return (
         <div>
-            <div className={styles.settingsheader}>Site Settings</div>
             <div className={styles.settingscontainer}>
                 <div>Site Accent color</div>
                 <div><GlobalColorUpdater /></div>

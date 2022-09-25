@@ -16,10 +16,6 @@ export default function IndexDBCleanup() {
     }, []);
     return (
         <div className={styles.dbcleanupcontainer}>
-            <div className={styles.header}>
-                <img onClick={() => setCurrentView('settings')} src='/icons/back.svg' />
-                <div >Index DB Cleanup</div>
-            </div>
             <div style={{ fontSize: 'large' }}>Tables:</div>
             <div className={styles.content}>
                 {allTables?.map(t => <TableSetting key={t.name} tablename={t.name} />)}

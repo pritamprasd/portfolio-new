@@ -5,20 +5,11 @@
     gap: 1rem
 }
 
-.header{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    padding: 2rem;
-    align-items: center;
-    font-size: x-large;
-}
-
 .content{    
     padding-right: 4rem;
     display: grid;
     grid-template-columns: 1fr 5fr 0.5fr;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .key{
@@ -43,4 +34,5 @@
     width: 1.5rem;
     cursor: pointer;
     justify-self: center;
+    margin-left: 1rem;
 }

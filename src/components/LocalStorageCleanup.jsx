@@ -13,10 +13,6 @@ export default function LocalStorageCleanup() {
   }, [rerender]);
   return (
     <div className={styles.cleanupcontainer}>
-      <div className={styles.header}>
-        <img onClick={() => setCurrentView('settings')} src='/icons/back.svg' />
-        <div >Local Storage Cleanup</div>
-      </div>
       <div style={{ fontSize: 'large' }}>Entries:</div>
       <div className={styles.content}>
         <div>Key</div>

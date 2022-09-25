@@ -7,7 +7,6 @@ import GithubSummary from '../tools/github_summary/GithubSummary';
 import TextEditor from '../tools/text_editor/TextEditor';
 import FullscreenButton from '../components/FullScreenButton/FullscreenButton';
 import NetworkInformation from '../tools/network-information/NetworkInformation';
-import ToolGlobalHeader from '../components/ToolGlobalHeader';
 import IndexDBCleanup from '../components/IndexDBCleanup';
 import LocalStorageCleanup from '../components/LocalStorageCleanup';
 
