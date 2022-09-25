@@ -33,6 +33,7 @@ button{
     border-color: var(--primary-color);
     border-style: solid;
     border-width: 0.08rem;
+    min-width: 4rem;
 }
 
 button:focus, button:active{
