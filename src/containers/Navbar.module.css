@@ -58,6 +58,7 @@
     padding-top: 4rem;
 }
 
+
 @media screen and (min-width: 600px) {
     .togglenavbar {
         display: none;

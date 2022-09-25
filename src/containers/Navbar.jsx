@@ -1,5 +1,6 @@
 import React from 'react'
 import SocialLinks from '../components/SocialLinks';
+import { isMobilePortrait } from '../utils/helpers';
 import useGlobalState from '../utils/store';
 import styles from './Navbar.module.css'
 
@@ -36,9 +37,13 @@ export function PagesContainer({ is_static }) {
 
 export function PageLink({ title }) {
   const [_, setCurrentView] = useGlobalState('current_view');
+  const [isHidden, setIsHidden] = useGlobalState('navbar_hidden');
   const path = '/icons/' + title + '.svg';
   function handlePageLinkClick() {
-    setCurrentView(title);
+    setCurrentView(title);    
+    if(isMobilePortrait()){
+      setIsHidden(true);
+    }
   }
   return (
     <div className={styles.pagelink} onClick={handlePageLinkClick}>

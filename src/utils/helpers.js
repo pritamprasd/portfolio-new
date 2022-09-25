@@ -4,3 +4,10 @@ export async function checkResponse(response) {
     }
     return response
 }
+
+export function isMobilePortrait() {
+    if (window.orientation === 0) {
+        return true
+    }
+    return false
+}
