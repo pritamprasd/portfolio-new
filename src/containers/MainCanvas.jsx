@@ -2,13 +2,13 @@ import React from 'react'
 import useGlobalState from '../utils/store';
 import WelcomeScreen from '../components/WelcomeScreen';
 import ToolsPage from './ToolsPage';
-import SettingsPage from '../components/SettingsPage';
+import SettingsPage from '../components/SettingsPage/SettingsPage';
 import GithubSummary from '../tools/github_summary/GithubSummary';
 import TextEditor from '../tools/text_editor/TextEditor';
 import FullscreenButton from '../components/FullScreenButton/FullscreenButton';
 import NetworkInformation from '../tools/network-information/NetworkInformation';
-import IndexDBCleanup from '../components/IndexDBCleanup';
-import LocalStorageCleanup from '../components/LocalStorageCleanup';
+import IndexDBCleanup from '../components/IndexDBCleanup/IndexDBCleanup';
+import LocalStorageCleanup from '../components/LocalStorageCleanup/LocalStorageCleanup';
 
 export default function MainCanvas() {
   const [current_view, _] = useGlobalState('current_view');

@@ -1,6 +1,6 @@
 import React from 'react'
-import useGlobalState from '../utils/store';
-import GlobalColorUpdater from './GlobalColorUpdater'
+import useGlobalState from '../../utils/store';
+import GlobalColorUpdater from '../GlobalColorUpdater'
 import styles from './SettingsPage.module.css'
 
 export default function SettingsPage() {

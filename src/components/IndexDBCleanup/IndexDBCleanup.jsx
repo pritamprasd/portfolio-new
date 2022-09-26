@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { getAllTableNames, purgeTable } from '../utils/indexdb';
-import useGlobalState from '../utils/store';
+import { getAllTableNames, purgeTable } from '../../utils/indexdb';
+import useGlobalState from '../../utils/store';
 import styles from './IndexDBCleanup.module.css';
 import swal from 'sweetalert';
 
