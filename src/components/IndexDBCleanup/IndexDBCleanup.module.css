@@ -9,6 +9,7 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 .tablesetting{
@@ -16,4 +17,8 @@
     flex-direction: row;    
     gap: 4rem;
     align-items: center;
+}
+
+.tablesetting>div:first-child{
+    min-width: 8rem;
 }
