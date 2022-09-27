@@ -9,6 +9,7 @@ import FullscreenButton from '../components/FullScreenButton/FullscreenButton';
 import NetworkInformation from '../tools/network-information/NetworkInformation';
 import IndexDBCleanup from '../components/IndexDBCleanup';
 import LocalStorageCleanup from '../components/LocalStorageCleanup';
+import FileExplorer from '../tools/file_explorer/FileExplorer';
 
 export default function MainCanvas() {
   const [current_view, _] = useGlobalState('current_view');
@@ -21,7 +22,7 @@ export default function MainCanvas() {
 
       {current_view === 'network_information' && <NetworkInformation />}
       {current_view === 'github_summary' && <GithubSummary />}
-      {current_view === 'rich_editor' && <TextEditor />}
+      {current_view === 'browser_drive' && <FileExplorer />}
 
       {current_view === 'indexdb-cleanup' && <IndexDBCleanup />}
       {current_view === 'ls-cleanup' && <LocalStorageCleanup />}
