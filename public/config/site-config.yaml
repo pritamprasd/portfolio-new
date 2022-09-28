@@ -27,15 +27,15 @@ notes:
     type: github_link
     link: https://github.com/pritamprasd/cryptography-basics-web/blob/main/readme.md
   - name: Oauth2 A simpler way
-    type: notion_web
-    link: https://pritamprasad.notion.site/OAuth2-A-simpler-way-93685cfc2b244563ab81cfee1e0ec4f1
+    type: github_link
+    link: https://github.com/pritamprasd/notes/blob/main/ouath2/index.md
 descriptions:  
   home:
     name: Home Page 
     parent: home  
   notes:
     name: Notes
-    parent: home
+    parent: notes
   projects:
     name: All Projects
     parent: home
