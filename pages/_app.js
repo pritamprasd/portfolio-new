@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { get_config } from '../src/utils/config';
 import useGlobalState from '../src/utils/store';
 import '../styles/global.css';
+import '../styles/highlightjs/default.css';
 
 export default function MyApp({ Component, pageProps }) {
     const [_, setConfig] = useGlobalState('config');

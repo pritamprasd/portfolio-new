@@ -1,0 +1,52 @@
+.main_container{
+    display: grid;
+    padding: 4rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.notetile{
+    display: flex;   
+    flex-direction: column;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: var(--primary-color);
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.notetile:hover{
+    background-color: var(--primary-color);
+}
+
+.note_name{
+    padding: 1rem;    
+}
+
+.note_content{
+    max-width: 80vw;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1360px) {
+    .main_container  {
+        padding: 1.5rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .main_container  {
+        padding: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main_container  {
+        padding: 2rem;
+        grid-template-columns: 1fr;
+    }
+}
+

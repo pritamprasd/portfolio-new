@@ -1,0 +1,93 @@
+title : "pritam.dev"
+pages:
+  - notes
+  - projects
+  - tools
+  - about
+  - settings
+tools:
+  - github_summary
+  - network_information
+  - browser_drive
+  - todo
+  - code_editor  
+  - rich_editor
+  - copy_tool  
+notes:
+  - name: Rust Book Summary
+    type: github_link
+    link: https://github.com/pritamprasd/rust-learning/blob/master/readme.md
+  - name: Solidity Notes
+    type: github_link
+    link: https://github.com/pritamprasd/notes/blob/main/solidity/summary.md
+  - name: Redis Notes
+    type: github_link
+    link: https://github.com/pritamprasd/notes/blob/main/redis/commands.md
+  - name: Crypto101 for DEVs
+    type: github_link
+    link: https://github.com/pritamprasd/cryptography-basics-web/blob/main/readme.md
+  - name: Oauth2 A simpler way
+    type: notion_web
+    link: https://pritamprasad.notion.site/OAuth2-A-simpler-way-93685cfc2b244563ab81cfee1e0ec4f1
+descriptions:  
+  home:
+    name: Home Page 
+    parent: home  
+  notes:
+    name: Notes
+    parent: home
+  projects:
+    name: All Projects
+    parent: home
+  tools:
+    name: All Tools 
+    parent: home
+  about:
+    name: About site
+    parent: home
+  settings:
+    name: Site settings
+    parent: home
+  indexdb-cleanup:
+    name: Cleanup Browser DB Tables
+    parent: settings    
+  ls-cleanup:
+    name: Cleanup Browser Local Storage
+    parent: settings 
+  github_summary: 
+    toolid: github_summary
+    name: Github Summary Viewer
+    description: Pulls up Github Public data for a username, and allows set of analytics on it.
+    parent: tools
+  todo:
+    toolid: todo
+    name: Todo tracker App
+    description: Todo tracker app, saves all todos in indexdb
+    parent: tools
+    features:
+      - offline/ondevice storage
+  code_editor:
+    toolid: code_editor
+    name: VS like editor
+    description: dddd
+    parent: tools
+  network_information:
+    toolid: network_information
+    name: Public network information
+    description: dddd
+    parent: tools
+  rich_editor:
+    toolid: rich_editor
+    name: Text Editor
+    description: dddd
+    parent: tools
+  copy_tool:
+    toolid: copy_tool
+    name: Copy/Paste 
+    description: dddd
+    parent: tools
+  browser_drive:
+    toolid: browser_drive
+    name: Browser Drive
+    description: browser based file storage using indexdb
+    parent: tools
