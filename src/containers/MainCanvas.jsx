@@ -27,6 +27,7 @@ export default function MainCanvas() {
       {current_view === 'network_information' && <NetworkInformation />}
       {current_view === 'github_summary' && <GithubSummary />}
       {current_view === 'browser_drive' && <FileExplorer />}
+      {current_view === 'text_editor' && <TextEditor />}
 
       {current_view === 'indexdb-cleanup' && <IndexDBCleanup />}
       {current_view === 'ls-cleanup' && <LocalStorageCleanup />}

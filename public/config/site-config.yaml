@@ -11,7 +11,7 @@ tools:
   - browser_drive
   - todo
   - code_editor  
-  - rich_editor
+  - text_editor
   - copy_tool  
 notes:
   - name: Rust Book Summary
@@ -76,8 +76,8 @@ descriptions:
     name: Public network information
     description: dddd
     parent: tools
-  rich_editor:
-    toolid: rich_editor
+  text_editor:
+    toolid: text_editor
     name: Text Editor
     description: dddd
     parent: tools
