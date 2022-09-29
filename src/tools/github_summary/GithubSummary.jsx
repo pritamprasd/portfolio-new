@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Loading from '../../components/Loading';
 import { getRepoInfoAndSaveToDb } from '../../utils/apis/github';
 import { getAllRepoBy } from '../../utils/indexdb/models/github_projects';
 import useGlobalState from '../../utils/store';
@@ -9,8 +10,10 @@ export default function GithubSummary() {
     const [username, setUsername] = useGlobalState('git_username');
     const [liveUsername, setLiveUsername] = useState('pritamprasd');
     const [projects, setProjects] = useState([]);
+    const [loading, setloading] = useState(false)
     useEffect(() => {
         async function update_projects() {
+            setloading(true)
             var projects = await getAllRepoBy(username);
             if (projects == null || projects.length < 1) {
                 console.log(`Username: ${username} not found in db.`)
@@ -18,6 +21,7 @@ export default function GithubSummary() {
             }
             projects = await getAllRepoBy(username);
             setProjects(projects);
+            setloading(false);
         }
         update_projects();
     }, [username]);
@@ -39,7 +43,8 @@ export default function GithubSummary() {
                 <div className={styles.searchbutton} onClick={() => setUsername(liveUsername)}><img src='/icons/search.svg' /></div>
             </div>
             <div className={styles.content}>
-                {projects?.map(p => <ProjectTile key={p['reponame']} project={p} />)}
+                {!loading && projects?.map(p => <ProjectTile key={p['reponame']} project={p} />)}
+                {loading && <Loading/>}
             </div>
         </div>
     )
