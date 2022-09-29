@@ -4,14 +4,13 @@ import WelcomeScreen from '../components/WelcomeScreen';
 import ToolsPage from './ToolsPage';
 import SettingsPage from '../components/SettingsPage/SettingsPage';
 import GithubSummary from '../tools/github_summary/GithubSummary';
-import TextEditor from '../tools/text_editor/TextEditor';
-import FullscreenButton from '../components/FullScreenButton/FullscreenButton';
 import NetworkInformation from '../tools/network-information/NetworkInformation';
 import IndexDBCleanup from '../components/IndexDBCleanup/IndexDBCleanup';
 import LocalStorageCleanup from '../components/LocalStorageCleanup/LocalStorageCleanup';
 import FileExplorer from '../tools/file_explorer/FileExplorer';
 import AboutPage from '../components/About/AboutPage';
 import Notes from '../components/Notes/Notes';
+import ImageClassifier from '../tools/image_classifier/ImageClassifier';
 
 export default function MainCanvas() {
   const [current_view, _] = useGlobalState('current_view');
@@ -27,7 +26,7 @@ export default function MainCanvas() {
       {current_view === 'network_information' && <NetworkInformation />}
       {current_view === 'github_summary' && <GithubSummary />}
       {current_view === 'browser_drive' && <FileExplorer />}
-      {current_view === 'text_editor' && <TextEditor />}
+      {current_view === 'image_classifier' && <ImageClassifier />}
 
       {current_view === 'indexdb-cleanup' && <IndexDBCleanup />}
       {current_view === 'ls-cleanup' && <LocalStorageCleanup />}

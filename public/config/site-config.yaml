@@ -1,38 +1,27 @@
 title : "pritam.dev"
 pages:
-  - notes
-  - projects
   - tools
-  - about
+  - notes
+  - portfolio
+  - projects
   - settings
+  - about
 tools:
   - github_summary
+  - image_classifier
   - network_information
   - browser_drive
   - todo
   - code_editor  
   - text_editor
   - copy_tool  
-notes:
-  - name: Rust Book Summary
-    type: github_link
-    link: https://github.com/pritamprasd/rust-learning/blob/master/readme.md
-  - name: Solidity Notes
-    type: github_link
-    link: https://github.com/pritamprasd/notes/blob/main/solidity/summary.md
-  - name: Redis Notes
-    type: github_link
-    link: https://github.com/pritamprasd/notes/blob/main/redis/commands.md
-  - name: Crypto101 for DEVs
-    type: github_link
-    link: https://github.com/pritamprasd/cryptography-basics-web/blob/main/readme.md
-  - name: Oauth2 A simpler way
-    type: github_link
-    link: https://github.com/pritamprasd/notes/blob/main/ouath2/index.md
 descriptions:  
   home:
     name: Home Page 
-    parent: home  
+    parent: home
+  portfolio:
+    name: Professional Summary
+    parent: home
   notes:
     name: Notes
     parent: notes
@@ -58,6 +47,11 @@ descriptions:
     toolid: github_summary
     name: Github Summary Viewer
     description: Pulls up Github Public data for a username, and allows set of analytics on it.
+    parent: tools
+  image_classifier:
+    toolid: image_classifier
+    name: Image detection
+    description: Image detection using Tensorflow Mobilenet
     parent: tools
   todo:
     toolid: todo
@@ -91,3 +85,19 @@ descriptions:
     name: Browser Drive
     description: browser based file storage using indexdb
     parent: tools
+notes:
+  - name: Rust Book Summary
+    type: github_link
+    link: https://github.com/pritamprasd/rust-learning/blob/master/readme.md
+  - name: Solidity Notes
+    type: github_link
+    link: https://github.com/pritamprasd/notes/blob/main/solidity/summary.md
+  - name: Redis Notes
+    type: github_link
+    link: https://github.com/pritamprasd/notes/blob/main/redis/commands.md
+  - name: Crypto101 for DEVs
+    type: github_link
+    link: https://github.com/pritamprasd/cryptography-basics-web/blob/main/readme.md
+  - name: Oauth2 A simpler way
+    type: github_link
+    link: https://github.com/pritamprasd/notes/blob/main/ouath2/index.md

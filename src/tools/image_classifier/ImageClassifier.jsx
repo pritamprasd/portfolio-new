@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Loading from '../../components/Loading';
-import styles from './TextEditor.module.css';
+import styles from './ImageClassifier.module.css';
 
-export default function TextEditor() {
+export default function ImageClassifier() {
     const [imageSelected, setImageSelected] = useState(null);
     const [predictions, setpredictions] = useState(null);
     const [loading, setLoading] = useState(false);
