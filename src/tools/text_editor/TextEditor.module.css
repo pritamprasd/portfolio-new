@@ -1,7 +1,20 @@
-.texteditorcontainer{
-    display: grid;
+.image_container{
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.uploaded_image{
+    height: 60vh;
+    padding: 1rem;
 }
 
-.image_container{
-    
+.upload_button{
+    display: none;
+}
+
+.upload_label{
+    cursor: pointer;
 }
