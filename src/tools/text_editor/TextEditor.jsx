@@ -14,8 +14,9 @@ export default function TextEditor() {
                 const predictions = await model.classify(img);
                 setpredictions(predictions);
             }
-            console.log('Predictions: ');
-            console.log(predictions);
+            else{
+                setpredictions(null);
+            }
         }
         doitnaw();
     }, [imageSelected]);
