@@ -14,24 +14,24 @@ import ImageClassifier from '../tools/image_classifier/ImageClassifier';
 
 export default function MainCanvas() {
   const [current_view, _] = useGlobalState('current_view');
-
   return (
-    <div>
-      {current_view === 'home' && <WelcomeScreen />}
-      {current_view === 'tools' && <ToolsPage />}
-      {current_view === 'settings' && <SettingsPage />}
-      {current_view === 'about' && <AboutPage />}
-      {current_view === 'notes' && <Notes />}
-
-      {current_view === 'network_information' && <NetworkInformation />}
-      {current_view === 'github_summary' && <GithubSummary />}
-      {current_view === 'browser_drive' && <FileExplorer />}
-      {current_view === 'image_classifier' && <ImageClassifier />}
-
-      {current_view === 'indexdb-cleanup' && <IndexDBCleanup />}
-      {current_view === 'ls-cleanup' && <LocalStorageCleanup />}
-
-      {/* <FullscreenButton/> */}
-    </div>
+    <div>{idToPageMap[current_view]}</div>
   )
+}
+
+export const idToPageMap = {
+  tools: <ToolsPage/>,
+  home: <WelcomeScreen />,
+  tools: <ToolsPage />,
+  settings: <SettingsPage />,
+  about: <AboutPage />,
+  notes: <Notes />,
+
+  network_information: <NetworkInformation />,
+  github_summary: <GithubSummary />,
+  browser_drive: <FileExplorer />,
+  image_classifier: <ImageClassifier />,
+  
+  indexdb_cleanup: <IndexDBCleanup />,
+  ls_cleanup: <LocalStorageCleanup/>
 }

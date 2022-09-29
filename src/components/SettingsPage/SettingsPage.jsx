@@ -12,7 +12,7 @@ export default function SettingsPage() {
                 <div><GlobalColorUpdater /></div>
 
                 <div>Database Cleanup(IndexDB)</div>
-                <div><button onClick={() => setCurrentView('indexdb-cleanup')}>View</button></div>
+                <div><button onClick={() => setCurrentView('indexdb_cleanup')}>View</button></div>
 
                 <div>Local Storage Cleanup(IndexDB)</div>
                 <div><button onClick={() => setCurrentView('ls-cleanup')}>Clean</button></div>

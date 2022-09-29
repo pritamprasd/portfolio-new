@@ -37,10 +37,10 @@ descriptions:
   settings:
     name: Site settings
     parent: home
-  indexdb-cleanup:
+  indexdb_cleanup:
     name: Cleanup Browser DB Tables
     parent: settings    
-  ls-cleanup:
+  ls_cleanup:
     name: Cleanup Browser Local Storage
     parent: settings 
   github_summary: 
