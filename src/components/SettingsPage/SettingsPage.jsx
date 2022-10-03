@@ -16,6 +16,8 @@ export default function SettingsPage() {
 
                 <div>Local Storage Cleanup(IndexDB)</div>
                 <div><button onClick={() => setCurrentView('ls-cleanup')}>Clean</button></div>
+
+                
             </div>
         </div>
     )
