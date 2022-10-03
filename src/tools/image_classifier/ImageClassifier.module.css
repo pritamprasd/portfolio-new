@@ -18,6 +18,11 @@
 
 .upload_label{
     cursor: pointer;
+    background-color: var(--primary-color);
+    height: 1.5rem;
+    width: 4rem;
+    text-align: center;
+    padding-top: 0.25rem;
 }
 
 .pred_1{

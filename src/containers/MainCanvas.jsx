@@ -1,6 +1,5 @@
 import React from 'react'
 import useGlobalState from '../utils/store';
-import WelcomeScreen from '../components/WelcomeScreen';
 import ToolsPage from './ToolsPage';
 import SettingsPage from '../components/SettingsPage/SettingsPage';
 import GithubSummary from '../tools/github_summary/GithubSummary';
@@ -11,6 +10,7 @@ import FileExplorer from '../tools/file_explorer/FileExplorer';
 import AboutPage from '../components/About/AboutPage';
 import Notes from '../components/Notes/Notes';
 import ImageClassifier from '../tools/image_classifier/ImageClassifier';
+import WelcomeScreen from '../components/home/WelcomeScreen';
 
 export default function MainCanvas() {
   const [current_view, _] = useGlobalState('current_view');

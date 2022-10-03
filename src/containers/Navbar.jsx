@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
 import SocialLinks from '../components/SocialLinks';
 import { isMobilePortrait } from '../utils/helpers';
 import useGlobalState from '../utils/store';
@@ -19,7 +19,7 @@ export default function Navbar() {
 export function SiteHeader() {
   const [_, setCurrentView] = useGlobalState('current_view');
   return (
-    <div className={styles.siteheader} onClick={() => setCurrentView("default")}>
+    <div className={styles.siteheader} onClick={() => setCurrentView("home")}>
       <img src='/icons/icon192.png'/>
     </div>
   );
