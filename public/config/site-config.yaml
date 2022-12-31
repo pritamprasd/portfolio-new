@@ -9,12 +9,13 @@ pages:
 tools:
   - github_summary
   - image_classifier
-  - network_information
   - browser_drive
   - todo
   - code_editor  
   - text_editor
   - copy_tool  
+  - network_information
+  
 descriptions:  
   home:
     name: Home Page 

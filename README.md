@@ -21,7 +21,7 @@ yarn dev
 - However, sometimes you might want to add some defaults for the development (next dev) or production (next start) environment. Next.js allows you to set defaults in `.env` (all environments), `.env.development` (development environment), and `.env.production` (production environment).
 - `.env.local` always overrides the defaults set.(add to .gitignore).
 - Env vars:
-    - NEXT_PUBLIC_ENABLE_CONFIG_CACHE: Nope / Yup, enable cahing of config file.
+    - NEXT_PUBLIC_ENABLE_CONFIG_CACHE: Nope / Yup, enable caching of config file.
     - NEXT_PUBLIC_INDEXDB_NAME: indexdb name
 
 
